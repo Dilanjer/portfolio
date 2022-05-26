@@ -23,7 +23,14 @@ const portfolio = () => {
         </h3>
         <ul className='ml-3 space-y-1'>
           <li className='text-sm'>
-            <Meta>Website</Meta> Null
+            <Meta>Website</Meta>
+            <a
+              className='text-blue-500 underline'
+              target={'_blank'}
+              rel={'noreferrer'}
+              href='https://portfolio-dilanjer.vercel.app/'>
+              https://portfolio-dilanjer.vercel.app/
+            </a>
           </li>
           <li className='text-sm'>
             <Meta>Stack</Meta>
