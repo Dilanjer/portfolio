@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         initial={false}
         exitBeforeEnter
         onExitComplete={() => window.scrollTo(0, 0)}>
-        <Component key={router.asPath} {...pageProps} />
+        <Component router={router} key={router.asPath} {...pageProps} />
       </AnimatePresence>
       <Footer />
     </>

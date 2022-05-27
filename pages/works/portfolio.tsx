@@ -1,15 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
-import Badge from '../../components/Badge';
+import Badge from '../../UI/Badge';
 import Section from '../../components/layout/Section';
-import { Meta, Title } from '../../components/Work';
+import Meta from '../../UI/Meta';
+import { NextPage } from 'next';
+import Breadcrumbs from '../../UI/Breadcrumbs';
 
-const portfolio = () => {
+const portfolio: NextPage = ({ router }: any) => {
   return (
-    <Section className='max-w-xl'>
-      <Title>
+    <Section className='max-w-lg'>
+      <Breadcrumbs paths={router.asPath}>
         PortFolio <Badge size='sm'>2022-</Badge>
-      </Title>
+      </Breadcrumbs>
       <p className='my-5 indent-4'>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eos
         qui! Enim suscipit, a cumque accusamus unde alias exercitationem

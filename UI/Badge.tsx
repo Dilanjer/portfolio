@@ -6,7 +6,7 @@ interface BadgeProps {
   className?: string;
 }
 
-const Badge = ({ children, size, className }: BadgeProps) => {
+const Badge: React.FC<BadgeProps> = ({ children, size, className }) => {
   return (
     <span
       className={`${className} text-${size} bg-green-100 px-0.5 font-medium`}>

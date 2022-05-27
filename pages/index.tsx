@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Main from '../components/layout/Main';
 import Section from '../components/layout/Section';
 import { ChevronRightIcon, MenuIcon } from '@heroicons/react/outline';
+import Button from '../UI/Button';
 
 const Home: NextPage = () => {
   return (
@@ -37,10 +38,12 @@ const Home: NextPage = () => {
             </p>
           </div>
           <Link href={'/works'}>
-            <button className=' mt-14 flex items-center rounded-sm bg-teal-600 py-1.5 px-4 font-semibold text-white transition-colors hover:bg-teal-700'>
-              <span>My Portfolio</span>
-              <ChevronRightIcon className='mt-0.5 ml-1 w-4' />
-            </button>
+            <a>
+              <Button>
+                <span>My Portfolio</span>
+                <ChevronRightIcon className='mt-0.5 ml-1 w-4' />
+              </Button>
+            </a>
           </Link>
         </div>
         <div className='m-auto mb-5'>
