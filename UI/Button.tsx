@@ -6,7 +6,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ children }) => {
   return (
-    <button className='mt-14 flex items-center rounded-sm bg-teal-600 py-1.5 px-4 font-semibold text-white transition-colors hover:bg-teal-700'>
+    <button className='flex items-center rounded-sm bg-teal-600 py-1.5 px-4 font-semibold text-white transition-colors hover:bg-teal-700'>
       {children}
     </button>
   );

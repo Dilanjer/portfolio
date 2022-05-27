@@ -30,7 +30,7 @@ const Home: NextPage = () => {
               </span>
             </h2>
           </div>
-          <div className='my-2'>
+          <div className='mt-2 mb-14'>
             <p className='max-w-sm bg-white/60 p-2  text-base text-primary shadow '>
               I am a junior developer from
               <span className='font-medium'> Armenia.</span> I love what I do

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import classNames from 'classnames';
 
 interface PopoverPros {
   anchorEl?: any;
@@ -21,9 +22,11 @@ const Popover = ({
   onClose,
   open,
   className,
+  origin = 'center',
   props,
 }: PopoverPros) => {
   const anchorElPosition = getAnchorElPositions(anchorEl);
+  const [originPostiton, setOriginPosition] = React.useState(origin);
   const popoverRef = React.useRef<any>();
 
   const escClose = React.useCallback(
@@ -53,6 +56,8 @@ const Popover = ({
     popoverRef.current.style.top = shouldMoveTop
       ? `${anchorElPosition.top - popoverHeight - 10}px`
       : `${anchorElPosition.height + anchorElPosition.top + 10}px`;
+
+    return shouldMoveTop;
   };
 
   const updatePopoverHorizontalPosttion = () => {
@@ -63,11 +68,25 @@ const Popover = ({
     popoverRef.current.style.left = shouldMoveLeft
       ? `${anchorElPosition.left - popoverWidth + anchorElPosition.width}px`
       : `${anchorElPosition.left}px`;
+
+    return shouldMoveLeft;
   };
 
   const updatePopoverPosttion = () => {
-    updatePopoverVerticalPosttion();
-    updatePopoverHorizontalPosttion();
+    const popoverMoveTop = updatePopoverVerticalPosttion();
+    const popoverMoveLeft = updatePopoverHorizontalPosttion();
+
+    if (!popoverMoveTop && popoverMoveLeft) {
+      setOriginPosition('topRight');
+    } else if (!popoverMoveTop && !popoverMoveLeft) {
+      setOriginPosition('topLeft');
+    } else if (popoverMoveTop && !popoverMoveLeft) {
+      setOriginPosition('bottomLeft');
+    } else if (popoverMoveTop && popoverMoveLeft) {
+      setOriginPosition('bottomRight');
+    } else {
+      setOriginPosition('center');
+    }
   };
 
   React.useEffect(() => {
@@ -84,14 +103,22 @@ const Popover = ({
     };
   }, []);
 
+  const classes = classNames('absolute z-20', className, {
+    'origin-center': originPostiton === 'center',
+    'origin-top': originPostiton === 'top',
+    'origin-left': originPostiton === 'left',
+    'origin-right': originPostiton === 'right',
+    'origin-bottom': originPostiton === 'bottom',
+    'origin-top-right': originPostiton === 'topRight',
+    'origin-top-left': originPostiton === 'topLeft',
+    'origin-bottom-left': originPostiton === 'bottomLeft',
+    'origin-bottom-right': originPostiton === 'bottomRight',
+  });
+
   if (!open) return null;
   return (
     <motion.div
-      className={className}
-      style={{
-        position: 'absolute',
-        zIndex: 20,
-      }}
+      className={classes}
       initial={{
         scale: 0.9,
         opacity: 0.2,
@@ -110,7 +137,7 @@ const Popover = ({
       }}
       ref={popoverRef}
       {...props}>
-      <div className={'z-50 w-full'}>{children}</div>
+      {children}
     </motion.div>
   );
 };
