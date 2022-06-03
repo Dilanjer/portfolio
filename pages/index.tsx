@@ -84,7 +84,7 @@ const Home: NextPage = () => {
               <ul className='ml-5'>
                 <li>- JavaScript (ES6+)</li>
                 <li>- ReactJS, NextJS (in learning)</li>
-                <li>- Redux, Redux Toolkit, Redux Thunk</li>
+                <li>- Redux, Redux Toolkit, Redux Thunk (in learning)</li>
                 <li>- React Hook Form</li>
                 <li>- ESLint, Prettier</li>
                 <li>- SCSS / styled-components / CSS Modules</li>
