@@ -12,12 +12,7 @@ const portfolio: NextPage = ({ router }: any) => {
       <Breadcrumbs paths={router.asPath}>
         PortFolio <Badge size='sm'>2022-</Badge>
       </Breadcrumbs>
-      <p className='my-5 indent-4'>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eos
-        qui! Enim suscipit, a cumque accusamus unde alias exercitationem
-        doloremque porro ducimus incidunt, ea vitae ipsa quas voluptatem
-        deleniti culpa.
-      </p>
+      <p className='my-5 indent-4'>My portFolio</p>
 
       <div className='m-auto mb-5'>
         <h3 className='mb-3 max-w-sm text-2xl font-bold text-primary underline decoration-slate-500 underline-offset-4'>
@@ -31,7 +26,7 @@ const portfolio: NextPage = ({ router }: any) => {
             </a>
           </li>
           <li className='text-sm'>
-            <Meta>Soure Code</Meta>
+            <Meta>Source Code</Meta>
             <a
               className='text-blue-500 underline'
               target={'_blank'}

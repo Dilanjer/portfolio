@@ -9,6 +9,14 @@ const works = () => {
     <Section title='Works'>
       <div className='flex flex-col flex-wrap items-center gap-0 space-y-4 md:flex-row md:items-start md:gap-3 md:space-y-0'>
         <WorkItem
+          href={'/works/newtodo'}
+          imgSrc={'/images/works/todo_app.jpg'}
+          title={'New ToDo'}
+          description={`
+					This is my BEST Project (in development)
+				`}
+        />
+        <WorkItem
           href={'/works/portfolio'}
           imgSrc={'/images/main.gif'}
           title={'Portfolio'}

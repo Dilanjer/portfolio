@@ -101,7 +101,7 @@ const Home: NextPage = () => {
               <ul className='ml-5'>
                 <li>- Node.JS / Express</li>
                 <li>- MongoDB / Mongoose</li>
-                <li>- JWT / PassportJS</li>
+                <li>- JWT / PassportJS (in learning)</li>
               </ul>
             </li>
 

@@ -30,7 +30,7 @@ const waxom: NextPage = ({ router }: any) => {
             </a>
           </li>
           <li className='text-sm'>
-            <Meta>Soure Code</Meta>
+            <Meta>Source Code</Meta>
             <a
               className='text-blue-500 underline'
               target={'_blank'}
