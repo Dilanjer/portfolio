@@ -10,8 +10,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Section className='mb-10'>
-        <div className='mb-14 flex flex-col items-center pt-12'>
-          <div className='text-center'>
+        <div className='mb-14 flex flex-col items-center space-y-5 pt-12'>
+          <div className='space-y-3 text-center'>
             <Image
               className='rounded-md'
               width={'480'}
@@ -30,12 +30,20 @@ const Home: NextPage = () => {
               </span>
             </h2>
           </div>
-          <div className='mt-2 mb-14'>
+          <div className=''>
             <p className='max-w-sm bg-white/60 p-2  text-base text-primary shadow '>
-              I am a junior developer from
+              I am a junior Frontend developer from
               <span className='font-medium'> Armenia.</span> I love what I do
               and it inspires me. for new and interesting projects
             </p>
+          </div>
+          <div className='!my-5'>
+            <span className='font-bold text-primary'>Contact me: </span>
+            <a
+              className='text-orange-600'
+              href='mailto:artur_hovhannisyan@protonmail.com'>
+              artur_hovhannisyan@protonmail.com
+            </a>
           </div>
           <Link href={'/works'}>
             <a>
@@ -75,7 +83,7 @@ const Home: NextPage = () => {
               <span className='mr-2 font-bold text-primary'>Frontend: </span>
               <ul className='ml-5'>
                 <li>- JavaScript (ES6+)</li>
-                <li>- ReactJS, NextJS</li>
+                <li>- ReactJS, NextJS (in learning)</li>
                 <li>- Redux, Redux Toolkit, Redux Thunk</li>
                 <li>- React Hook Form</li>
                 <li>- ESLint, Prettier</li>

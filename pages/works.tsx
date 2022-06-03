@@ -18,6 +18,31 @@ const works = () => {
 						eum illo harum molestias eos?
 				`}
         />
+        <WorkItem
+          href={'/works/waxom'}
+          imgSrc={'/images/works/waxom.png'}
+          title={'Waxom'}
+          description={`
+					This project is my favorite
+				`}
+        />
+        <WorkItem
+          href={'/works/tictactoe'}
+          imgSrc={'/images/works/tictactoe.png'}
+          title={'Tic Tac Toe'}
+          description={`
+					It's my first web game.
+				`}
+        />
+        <WorkItem
+          href={'/works/todo'}
+          imgSrc={'/images/works/todo.png'}
+          title={'ToDo'}
+          description={`
+					In this project, I wanted to dynamically create HTML markup and change
+					it with JavaScript.
+				`}
+        />
       </div>
     </Section>
   );

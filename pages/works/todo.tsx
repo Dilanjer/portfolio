@@ -6,17 +6,15 @@ import Meta from '../../UI/Meta';
 import { NextPage } from 'next';
 import Breadcrumbs from '../../UI/Breadcrumbs';
 
-const portfolio: NextPage = ({ router }: any) => {
+const todo: NextPage = ({ router }: any) => {
   return (
     <Section className='max-w-lg'>
       <Breadcrumbs paths={router.asPath}>
-        PortFolio <Badge size='sm'>2022-</Badge>
+        ToDo <Badge size='sm'>2020-</Badge>
       </Breadcrumbs>
       <p className='my-5 indent-4'>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eos
-        qui! Enim suscipit, a cumque accusamus unde alias exercitationem
-        doloremque porro ducimus incidunt, ea vitae ipsa quas voluptatem
-        deleniti culpa.
+        In this project, I wanted to dynamically create HTML markup and change
+        it with JavaScript.
       </p>
 
       <div className='m-auto mb-5'>
@@ -26,8 +24,12 @@ const portfolio: NextPage = ({ router }: any) => {
         <ul className='ml-3 space-y-1'>
           <li className='text-sm'>
             <Meta>Website</Meta>
-            <a className='text-blue-500 underline' rel={'noreferrer'} href='#'>
-              You already here
+            <a
+              className='text-blue-500 underline'
+              target={'_blank'}
+              rel={'noreferrer'}
+              href='https://dilanjer.github.io/todo/'>
+              https://dilanjer.github.io/todo/
             </a>
           </li>
           <li className='text-sm'>
@@ -36,23 +38,23 @@ const portfolio: NextPage = ({ router }: any) => {
               className='text-blue-500 underline'
               target={'_blank'}
               rel={'noreferrer'}
-              href='https://github.com/Dilanjer/portfolio'>
-              https://github.com/Dilanjer/portfolio
+              href='https://github.com/Dilanjer/todo'>
+              https://github.com/Dilanjer/todo
             </a>
           </li>
           <li className='text-sm'>
             <Meta>Stack</Meta>
-            NextJS, ReactJS, TypeScript
+            HTML5, LESS, JavaScript (ES6 +)
           </li>
         </ul>
 
         <div className='mt-5 border text-center shadow'>
           <Image
             className='rounded-md'
-            width={'480'}
-            height={'340'}
-            alt='hero'
-            src={'/images/main.gif'}
+            width={'800'}
+            height={'520'}
+            alt='todo'
+            src={'/images/works/todo.png'}
           />
         </div>
       </div>
@@ -60,4 +62,4 @@ const portfolio: NextPage = ({ router }: any) => {
   );
 };
 
-export default portfolio;
+export default todo;
