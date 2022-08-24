@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <Link className='' href={'/'}>
       <a className='flex items-center space-x-1 p-2 outline-2 outline-blue-300'>
-        <span className='text-lg font-semibold'>Arthur Hovhhnaisyan</span>
+        <span className='text-lg font-semibold'>Arthur Hovhanniyan</span>
       </a>
     </Link>
   );
